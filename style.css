@@ -1,0 +1,64 @@
+/* Ensure consistent alignment */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+/* Container: Limit max-width */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Ensures it doesn’t expand */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Main Content with Fixed Margin */
+.main-content {
+    margin-left: 260px; /* Matches sidebar width */
+    padding: 20px;
+    width: calc(100% - 260px); /* Adjusts content width */
+    background-color: #ecf0f1;
+    min-height: 100vh;
+}
+
+/* Navbar Adjustments */
+.navbar {
+    width: 100%;
+    max-width: 100vw; /* Avoids overflow */
+    background-color: #333;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 220px;
+    }
+    .main-content {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
